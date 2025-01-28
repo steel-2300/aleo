@@ -1,0 +1,15 @@
+**/target/*
+**/*.rs.bk
+
+transcript
+challenge*
+response*
+phase1radix2m*
+tmp_*
+
+.vscode
+**.idea/
+
+**/*.DS_Store
+
+**/*.env

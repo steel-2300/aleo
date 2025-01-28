@@ -1,0 +1,38 @@
+[workspace]
+members = [
+    "phase1-cli",
+    "phase1",
+    "phase1-cli",
+    "phase1-coordinator",
+    "phase1-wasm",
+    "phase1-wasm-keys",
+    "phase2",
+    "setup1-cli-tools",
+    "setup1-contributor",
+    "setup1-shared",
+    "setup1-verifier",
+    "setup2",
+    "setup-utils",
+]
+
+[profile.release]
+opt-level = 3
+lto = true
+incremental = true
+
+[profile.bench]
+opt-level = 3
+debug = false
+rpath = false
+lto = "thin"
+incremental = true
+debug-assertions = false
+
+[profile.dev]
+opt-level = 0
+
+[profile.test]
+opt-level = 1
+incremental = true
+debug-assertions = true
+debug = true
